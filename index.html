@@ -72,6 +72,7 @@ input,select{width:100%;padding:8px;margin-top:5px}.grid{display:grid;grid-templ
     z-index:1000;
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
@@ -156,7 +157,16 @@ input,select{width:100%;padding:8px;margin-top:5px}.grid{display:grid;grid-templ
 </div>
 
 <script>
+const SUPABASE_URL =
+'https://yzrvxayikwqywtmshnwz.supabase.co';
 
+const SUPABASE_KEY =
+'sb_publishable_k1Sbd6HPTSjYep6CtNtLHQ_A-To-sqZ';
+const supabaseClient =
+supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
 function openLogin(role){
 
     document.getElementById('loginForm').style.display='block';
