@@ -161,32 +161,21 @@ input,select{width:100%;padding:8px;margin-top:5px}.grid{display:grid;grid-templ
 let selectedRole = '';
 
 function openLogin(role){
-
     selectedRole = role;
-
-    document.getElementById('loginForm').style.display =
-    'block';
-
+    document.getElementById('loginForm').style.display = 'block';
 }
 
 function togglePassword(){
 
-    const password =
-        document.getElementById('password');
-
-    const btn =
-        event.target;
+    const password = document.getElementById('password');
+    const btn = event.target;
 
     if(password.type === 'password'){
-
         password.type = 'text';
         btn.innerHTML = 'Hide';
-
     }else{
-
         password.type = 'password';
         btn.innerHTML = 'Show';
-
     }
 
 }
@@ -205,8 +194,7 @@ function login(){
         pass === 'Admin@2026'
     ){
 
-        document.getElementById('loginPage')
-            .style.display='none';
+        document.getElementById('loginPage').style.display='none';
 
         alert('Welcome System Administrator');
 
@@ -214,8 +202,7 @@ function login(){
     }
 
     alert('Invalid Username or Password');
-
-
+}
 
 </script>
 
