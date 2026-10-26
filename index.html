@@ -157,21 +157,18 @@ input,select{width:100%;padding:8px;margin-top:5px}.grid{display:grid;grid-templ
 </div>
 
 <script>
-const SUPABASE_URL =
-'https://yzrvxayikwqywtmshnwz.supabase.co';
 
-const SUPABASE_KEY =
-'sb_publishable_k1Sbd6HPTSjYep6CtNtLHQ_A-To-sqZ';
-const supabaseClient =
-supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
-);
+let selectedRole = '';
+
 function openLogin(role){
 
-    document.getElementById('loginForm').style.display='block';
+    selectedRole = role;
+
+    document.getElementById('loginForm').style.display =
+    'block';
 
 }
+
 function togglePassword(){
 
     const password =
@@ -191,47 +188,34 @@ function togglePassword(){
         btn.innerHTML = 'Show';
 
     }
+
 }
+
 function login(){
-const user =
-    document.getElementById('username').value;
 
-const pass =
-    document.getElementById('password').value;
+    const user =
+        document.getElementById('username').value;
 
-   if(
-    selectedRole === 'admin' &&
-    user === 'admin' &&
-    pass === 'admin123'
-){
+    const pass =
+        document.getElementById('password').value;
 
-    localStorage.setItem('role','admin');
+    if(
+        selectedRole === 'admin' &&
+        user === 'Admin' &&
+        pass === 'Admin@2026'
+    ){
 
-    document.getElementById('loginPage').style.display='none';
+        document.getElementById('loginPage')
+            .style.display='none';
 
-    alert('Welcome Admin');
+        alert('Welcome System Administrator');
 
-    return;
-}
+        return;
+    }
 
-if(
-    selectedRole === 'branch' &&
-    user === 'branch1' &&
-    pass === 'branch123'
-){
+    alert('Invalid Username or Password');
 
-    localStorage.setItem('role','branch');
 
-    document.getElementById('loginPage').style.display='none';
-
-    alert('Welcome Branch');
-
-    return;
-}
-
-alert('Invalid Username or Password');
-
-}
 
 </script>
 
