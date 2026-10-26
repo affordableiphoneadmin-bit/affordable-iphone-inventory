@@ -183,8 +183,43 @@ function togglePassword(){
     }
 }
 function login(){
+const user =
+    document.getElementById('username').value;
 
-    alert('Login button works!');
+const pass =
+    document.getElementById('password').value;
+
+   if(
+    selectedRole === 'admin' &&
+    user === 'admin' &&
+    pass === 'admin123'
+){
+
+    localStorage.setItem('role','admin');
+
+    document.getElementById('loginPage').style.display='none';
+
+    alert('Welcome Admin');
+
+    return;
+}
+
+if(
+    selectedRole === 'branch' &&
+    user === 'branch1' &&
+    pass === 'branch123'
+){
+
+    localStorage.setItem('role','branch');
+
+    document.getElementById('loginPage').style.display='none';
+
+    alert('Welcome Branch');
+
+    return;
+}
+
+alert('Invalid Username or Password');
 
 }
 
