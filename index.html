@@ -101,10 +101,27 @@ input,select{width:100%;padding:8px;margin-top:5px}.grid{display:grid;grid-templ
                 id="username"
                 placeholder="Username">
 
-            <input
-                type="password"
-                id="password"
-                placeholder="Password">
+            <div style="position:relative;">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        style="width:100%;padding-right:70px;">
+
+    <span
+        onclick="togglePassword()"
+        style="
+            position:absolute;
+            right:15px;
+            top:12px;
+            cursor:pointer;
+            color:#0f766e;
+            font-weight:bold;">
+        Show
+    </span>
+
+</div>
 
             <button onclick="login()">
                 Login
@@ -145,7 +162,26 @@ function openLogin(role){
     document.getElementById('loginForm').style.display='block';
 
 }
+function togglePassword(){
 
+    const password =
+        document.getElementById('password');
+
+    const btn =
+        event.target;
+
+    if(password.type === 'password'){
+
+        password.type = 'text';
+        btn.innerHTML = 'Hide';
+
+    }else{
+
+        password.type = 'password';
+        btn.innerHTML = 'Show';
+
+    }
+}
 function login(){
 
     alert('Login button works!');
