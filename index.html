@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Inventory System V2</title>
+<style>
+body{margin:0;font-family:Segoe UI,sans-serif;background:#f4f6f9}
+.sidebar{position:fixed;left:0;top:0;width:260px;height:100%;background:#0f766e;color:#fff;padding:20px;overflow:auto}
+.sidebar h2{margin-bottom:20px}.sidebar ul{list-style:none;padding:0}.sidebar li{padding:8px 0}
+.main{margin-left:280px;padding:20px}
+.section{background:#fff;margin-bottom:20px;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+.card{background:#ecfdf5;padding:15px;border-left:5px solid #0f766e;border-radius:10px}
+.table-wrap{overflow:auto} table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:8px}th{background:#e6fffa}
+input,select{width:100%;padding:8px;margin-top:5px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+</style>
+</head><body>
+<div class='sidebar'>
+<h2>IMS V2</h2>
+<ul>
+<li>Dashboard</li><li>Product Management</li><li>Current Stock</li><li>Stock Movement</li><li>Restock Requests</li><li>Sales & Expenses</li><li>Cash On Hand</li><li>Branch Dashboard</li><li>My Inventory</li><li>Case Swap</li>
+</ul></div>
+<div class='main'>
+<div class='section'><h1>Inventory Management System V2</h1><p>All tabs include date fields.</p></div>
+<div class='section'><h2>Admin Dashboard</h2><div class='cards'><div class='card'>Products: 120+</div><div class='card'>Inventory: 5,860</div><div class='card'>Pending Requests: 12</div><div class='card'>Cash On Hand: ₱150,000</div></div></div>
+<div class='section'><h2>Product Management</h2><div class='grid'><div><label>Date Added</label><input type='date'></div><div><label>Category</label><select><option>General Units</option><option>Clear Case</option><option>Silicone Case</option><option>Tempered Glass</option></select></div><div><label>Product Name</label><input></div></div><br>
+<div class='table-wrap'><table><tr><th>Product</th><th>Category</th></tr>
+<tr><td>IPHONE UNITS</td><td>General Units</td></tr><tr><td>GIFT BOX</td><td>General Units</td></tr><tr><td>AIRPODS GEN 2</td><td>General Units</td></tr><tr><td>APPLE WATCH</td><td>General Units</td></tr><tr><td>XS MAX</td><td>Clear Case</td></tr><tr><td>XR</td><td>Clear Case</td></tr><tr><td>11 PRO</td><td>Clear Case</td></tr><tr><td>TG 15 PRO</td><td>Tempered Glass</td></tr><tr><td>TG 16 PROMAX</td><td>Tempered Glass</td></tr><tr><td>HI-TG 15 PRO</td><td>High Illumina TG</td></tr></table></div></div>
+<div class='section'><h2>Current Stock Tracker</h2><input type='date'><div class='table-wrap'><table><tr><th>Product</th><th>Main</th><th>Branch A</th><th>Total</th></tr><tr><td>IPHONE UNITS</td><td>15</td><td>10</td><td>25</td></tr></table></div></div>
+<div class='section'><h2>Stock Movement</h2><div class='grid'><input type='date'><input type='date'><input placeholder='Search'></div></div>
+<div class='section'><h2>Restock Requests</h2><div class='grid'><input type='date'><input placeholder='Branch'><input placeholder='Product'></div></div>
+<div class='section'><h2>Sales & Expenses Summary</h2><div class='grid'><input type='date'><input type='date'><input placeholder='Branch'></div></div>
+<div class='section'><h2>Cash On Hand</h2><div class='grid'><input type='date'><input type='date'><input value='₱150,000'></div></div>
+<div class='section'><h2>Branch Dashboard</h2><div class='grid'><input type='date'><input type='date'><select><option>This Month</option></select></div></div>
+<div class='section'><h2>My Inventory</h2><input type='date'></div>
+<div class='section'><h2>Branch Stock Movement</h2><div class='grid'><input type='date'><input placeholder='Product'><input placeholder='Cash Received'></div></div>
+<div class='section'><h2>Branch Expenses</h2><div class='grid'><input type='date'><input placeholder='Description'><input placeholder='Amount'></div></div>
+<div class='section'><h2>Clear Case Swap</h2><div class='grid'><input type='date'><input placeholder='Case Removed'><input placeholder='Case Added'></div></div>
+<div class='section'><h2>Restock Request Form</h2><div class='grid'><input type='date'><input placeholder='Product'><input placeholder='Quantity'></div></div>
+</div></body></html>
